@@ -49,7 +49,10 @@ $dash_border_radius: $modal_radius + $dash_padding;
   }
 
   // show apps button
-  .show-apps { @include overview_icon($osd_fg_color);}
+  .show-apps {
+      @include overview_icon($osd_fg_color);
+      color: white;
+  }
 
   .show-apps, .app-well-app {
     padding-bottom: $dash_padding;
