@@ -26,12 +26,12 @@ $app_icon_size: 96px;
       spacing: $base_padding;
     }
     // TODO: this only makes sense with blur-my-shell
-    StLabel {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: $base_border_radius;
-      background-size: auto;
-      padding: 0px $base_border_radius/2;
-    }
+    // StLabel {
+    //   background-color: rgba(255, 255, 255, 0.2);
+    //   border-radius: $base_border_radius;
+    //   background-size: auto;
+    //   padding: 0px $base_border_radius/2;
+    // }
   }
 }
 
@@ -95,8 +95,9 @@ $app_icon_size: 96px;
   width: 5px;
   border-radius:5px;
   // TODO: this only makes sense with blur-my-shell
-  margin-bottom: if($variant == 'light', 4px, 8px); // leave room for text background
-  background-color: if($variant == 'light', white, $osd_fg_color);
+  // margin-bottom: if($variant == 'light', 4px, 8px); // leave room for text background
+  // background-color: if($variant == 'light', white, $osd_fg_color);
+  background-color: $osd_fg_color;
 }
 
 // Rename popup for app folders
@@ -115,7 +116,7 @@ $app_icon_size: 96px;
     width: 10px;
     height: 10px;
     border-radius: 10px; // the same as height&width
-    background-color: white;
+    background-color: $fg_color;
   }
 }
 
