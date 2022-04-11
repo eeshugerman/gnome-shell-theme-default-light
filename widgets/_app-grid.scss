@@ -25,6 +25,12 @@ $app_icon_size: 96px;
     > StBoxLayout {
       spacing: $base_padding;
     }
+    StLabel {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: $base_border_radius;
+      background-size: auto;
+      padding: 0px $base_border_radius/2;
+    }
   }
 }
 
@@ -87,8 +93,8 @@ $app_icon_size: 96px;
   height: 5px;
   width: 5px;
   border-radius:5px;
-  margin-bottom: 8px;
-  background-color: $osd_fg_color;
+  margin-bottom: if($variant == 'light', 4px, 8px); // leave room for text background
+  background-color: if($variant == 'light', white, $osd_fg_color);
 }
 
 // Rename popup for app folders
