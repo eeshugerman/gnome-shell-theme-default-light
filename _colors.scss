@@ -5,8 +5,8 @@ $base_color: if($variant == 'light', #fff, darken(desaturate(#241f31, 100%), 2%)
 $bg_color: if($variant == 'light', #f6f5f4, lighten($base_color, 5%));
 $fg_color: if($variant == 'light', transparentize(black, .2), white);
 
-$selected_fg_color: #fff;
-$selected_bg_color: #3584e4;
+$selected_fg_color: if($variant == 'light', black, white);
+$selected_bg_color: if($variant == 'light', lighten(#3584e4, 10%), #3584e4);
 $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
 
 $borders_color: if($variant == 'light', transparentize($fg_color, .5), transparentize($fg_color, .9));
@@ -20,7 +20,7 @@ $error_color: if($variant == 'light', #e01b24, #c01c28);
 $success_color: if($variant == 'light', #2ec27e, #26a269);
 $destructive_color: if($variant == 'light', #e01b24, darken(#e01b24, 10%));
 
-$osd_fg_color: white;
+$osd_fg_color: if($variant == 'light', black, white);
 $osd_bg_color: transparentize(desaturate($bg_color, 100%),0.04);
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
 $osd_insensitive_fg_color: if($variant == 'light', mix($osd_fg_color, $osd_bg_color, 80%),  mix($osd_fg_color, $osd_bg_color, 70%));
