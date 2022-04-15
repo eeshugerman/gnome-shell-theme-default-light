@@ -1,6 +1,11 @@
 # "Default"-light theme
 This is a light variant of the default GNOME Shell theme.
 
+![Screenshot of a workspace with popover](/demo/workspace-popover.png)
+![Screenshot of a workspace with message tray](/demo/workspace-message-tray.png)
+![Screenshot of the Overview](/demo/overview.png)
+![Screenshot of the App Grid](/demo/app-grid.png)
+
 # Build and install
 You'll need a [Sass][sass-lang] compiler (`sassc`).
 ```bash
