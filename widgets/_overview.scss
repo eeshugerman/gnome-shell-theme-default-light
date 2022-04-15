@@ -5,7 +5,7 @@
 }
 
 #overviewGroup {
-  background-color: $system_bg_color;
+  background-color: if($variant == 'light', $checked_bg_color, $system_bg_color);
 }
 
 .overview-controls {
