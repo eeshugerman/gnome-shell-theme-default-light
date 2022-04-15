@@ -1,16 +1,24 @@
-# GNOME Shell Sass
-GNOME Shell Sass is a project intended to allow the sharing of the
-theme sources in sass between gnome-shell and other projects like
-gnome-shell-extensions.
+# "Default"-light theme
+This is a light variant of the default GNOME Shell theme.
 
-Any changes should be done in the [GNOME Shell subtree][shell-subtree]
-and not the stand-alone [gnome-shell-sass repository][sass-repo]. They
-will then be synchronized periodically before releases.
+# Build and install
+You'll need a [Sass][sass-lang] compiler (`sassc`).
+```bash
+make && make install
+```
+
+# Acknowledgments
+There's actually already a light variant of the shell theme upstream
+[[1][shell-subtree]] [[2][sass-repo]], but it's only used for GNOME Classic (or
+so I've heard), and therefore doesn't have full coverage the normal/modern GNOME
+Shell. This work piggybacks heavily on that upstream variant. In fact, it's
+really just a few hacks on top to fill in the cracks.
 
 ## License
-GNOME Shell Sass is distributed under the terms of the GNU General Public
+"Default"-light is distributed under the terms of the GNU General Public
 License, version 2 or later. See the [COPYING][license] file for details.
 
+[sass-lang]: https://sass-lang.com/
 [shell-subtree]: https://gitlab.gnome.org/GNOME/gnome-shell/tree/HEAD/data/theme/gnome-shell-sass
 [sass-repo]: https://gitlab.gnome.org/GNOME/gnome-shell-sass
 [license]: COPYING
