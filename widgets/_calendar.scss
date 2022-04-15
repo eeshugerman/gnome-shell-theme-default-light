@@ -111,7 +111,7 @@
   .calendar-today {
     background-color: $selected_bg_color;
     font-weight: 800;
-    color: $selected_fg_color !important;
+    color: if($variant == 'light', white, $selected_fg_color) !important;
 
     &:hover,&:focus {
       background-color:lighten($selected_bg_color, 3%);
