@@ -3,9 +3,9 @@
 
 $base_color: if($variant == 'light', white, darken(desaturate(#241f31, 100%), 2%));
 $bg_color: if($variant == 'light', darken($base_color, 5%), lighten($base_color, 5%));
-$fg_color: if($variant == 'light', transparentize(black, 0.2), white);
+$fg_color: if($variant == 'light', lighten(black, 30%), white);
 
-$selected_fg_color: if($variant == 'light', black, white);
+$selected_fg_color: $fg_color;
 $selected_bg_color: if($variant == 'light', lighten(#3584e4, 10%), #3584e4);
 $selected_borders_color: if($variant== 'light', lighten($selected_bg_color, 30%), darken($selected_bg_color, 30%));
 
