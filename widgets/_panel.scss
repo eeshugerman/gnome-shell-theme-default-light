@@ -15,9 +15,12 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
   // transparent panel on lock & login screens
   &.unlock-screen,
-  &.login-screen,
-  &:overview {
+  &.login-screen {
     background-color: transparent;
+  }
+  &:overview {
+      // does not look good (makes search bar spaceing look off) but at least it's legible
+      background-color: if($variant == 'light', $panel_bg_color, transparent);
   }
 
   // panel menus
