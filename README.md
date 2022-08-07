@@ -1,5 +1,5 @@
-# "Default"-light theme
-This is a light variant of the default GNOME Shell theme.
+# "Default"-light theme for GNOME Shell
+This is an _unofficial_ light variant of the default GNOME Shell theme.
 
 ![Screenshot of a workspace with popover](/demo/workspace-popover.png)
 ![Screenshot of a workspace with message tray](/demo/workspace-message-tray.png)
@@ -20,7 +20,7 @@ Shell. This work piggybacks heavily on that upstream variant. In fact, it's
 really just a few hacks on top to fill in the cracks.
 
 ## License
-"Default"-light is distributed under the terms of the GNU General Public
+This work is distributed under the terms of the GNU General Public
 License, version 2 or later. See the [COPYING][license] file for details.
 
 [sass-lang]: https://sass-lang.com/
