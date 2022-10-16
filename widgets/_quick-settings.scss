@@ -5,6 +5,11 @@
   .icon-button, .button {
     padding: $base_padding*1.75;
   }
+
+  .icon-button {
+    color: $fg_color;
+    background-color: darken($bg_color, 5%);
+  }
 }
 
 .quick-settings-grid {
@@ -19,7 +24,22 @@
   min-height: 40px;
   border:none;
 
-  &:checked { @include button(default); }
+  &:checked { 
+    @include button(default);
+    background-color: darken($selected_bg_color, 5%);
+    color: lighten($bg_color, 5%);
+
+    &:hover, &:focus { 
+      background-color: darken($selected_bg_color, 10%);
+      color: lighten($bg_color, 5%);
+    }
+  }
+
+  // Hover for the unchecked ones
+  &:hover {
+    background-color: darken($bg_color, 10%);
+  }
+
 
   & > StBoxLayout { spacing: $base_padding; }
 
@@ -34,6 +54,9 @@
   .quick-toggle-icon, .quick-toggle-arrow { icon-size: $base_icon_size; }
 }
 
+/*
+ * Quick toggle includes the options with an arrow and menu (Network, Power Mode, etc)
+ */
 .quick-menu-toggle {
   &:ltr > StBoxLayout { padding-right: 0; }
   &:rtl > StBoxLayout { padding-left: 0; }
@@ -53,7 +76,7 @@
   & > StBoxLayout { spacing: $base_padding; }
 
   .slider-bin {
-    &:focus {@include button(focus);}
+    &:focus { @include button(focus); }
     min-height: 16px; // slider size
     padding: $base_padding;
     border-radius: 99px;
@@ -81,7 +104,10 @@
       padding: 1.5 * $base_padding;
       background-color: lighten($bg_color, 10%);
 
-      &.active { background-color: $selected_bg_color; }
+      &.active { 
+        color: lighten($bg_color, 5%);
+        background-color: darken($selected_bg_color, 5%);
+      }
     }
 
     & .title {
@@ -115,4 +141,4 @@
 
 .nm-network-item {
   .wireless-secure-icon { icon-size: 0.5 * $base_icon_size; }
-}
+} 
