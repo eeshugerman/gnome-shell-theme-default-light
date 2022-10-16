@@ -28,7 +28,7 @@ $destructive_color: $error_color;
 
 $osd_fg_color: white;
 $osd_fg_color: if($variant == 'light', black, white);
-$osd_bg_color: $_dark_base_color; //hardcoded for both light & dark
+$osd_bg_color: if($variant == 'light', $bg_color, $_dark_base_color);
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
 $osd_insensitive_fg_color: if($variant == 'light', mix($osd_fg_color, $osd_bg_color, 80%),  mix($osd_fg_color, $osd_bg_color, 70%));
 $osd_borders_color: transparentize(black, 0.3);
