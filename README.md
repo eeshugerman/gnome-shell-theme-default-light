@@ -9,7 +9,7 @@ This is an _unofficial_ light variant of the default GNOME Shell theme.
 # Build and install
 You'll need a [Sass][sass-lang] compiler (`sassc`).
 ```bash
-make && make install
+make install
 ```
 
 # Acknowledgments
