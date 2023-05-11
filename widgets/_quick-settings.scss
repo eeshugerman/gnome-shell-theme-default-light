@@ -5,11 +5,6 @@
   .icon-button, .button {
     padding: $base_padding*1.75;
   }
-
-  .icon-button {
-    color: $fg_color;
-    background-color: darken($bg_color, 5%);
-  }
 }
 
 .quick-settings-grid {

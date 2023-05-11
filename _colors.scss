@@ -9,10 +9,10 @@ $_dark_base_color: desaturate($dark_4, 100%);
 
 $base_color: if($variant == 'light', $light_1, $_dark_base_color);
 $bg_color: if($variant == 'light', $light_2, lighten($base_color, 5%));
-$fg_color: if($variant == 'light', lighten(black, 30%), white);
+$fg_color: if($variant == 'light', $dark_3, white);
 
 $selected_fg_color: $light_1;
-$selected_bg_color: if($variant == 'light', lighten($blue_3, 10%), $blue_3);
+$selected_bg_color: if($variant == 'light', $blue_2, $blue_3);
 $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 20%));
 
 $borders_color: if($variant == 'light', transparentize($fg_color, .5), transparentize($fg_color, .9));
@@ -26,7 +26,7 @@ $error_color: if($variant == 'light', $red_3, $red_4);
 $success_color: if($variant == 'light', $green_4, $green_5);
 $destructive_color: $error_color;
 
-$osd_fg_color: if($variant == 'light', black, $light_1);
+$osd_fg_color: if($variant == 'light', $dark_5, $light_1);
 $osd_bg_color: if($variant == 'light', $bg_color, $_dark_base_color);
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
 $osd_insensitive_fg_color: if($variant == 'light', mix($osd_fg_color, $osd_bg_color, 80%),  mix($osd_fg_color, $osd_bg_color, 70%));
@@ -42,7 +42,7 @@ $button_mix_factor: 9%;
 $bubble_buttons_color: if($variant == 'light', darken($bg_color, 7%), lighten($bg_color, 5%));
 
 // overview background color
-$system_bg_color: if($variant == 'light', darken($base_color, 10%), $base_color);
+$system_bg_color: $base_color;
 
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
@@ -50,7 +50,7 @@ $insensitive_bg_color: mix($bg_color, $base_color, 60%);
 $insensitive_borders_color: mix($borders_color, $base_color, 60%);
 
 //colors for the backdrop state, derived from the main colors.
-$backdrop_base_color: if($variant =='light', darken($base_color,10%), lighten($base_color,1%));
+$backdrop_base_color: if($variant =='light', darken($base_color,1%), lighten($base_color,1%));
 $backdrop_bg_color: $bg_color;
 $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 80%);
 $backdrop_insensitive_color: if($variant =='light', darken($backdrop_bg_color,15%), lighten($backdrop_bg_color,15%));
