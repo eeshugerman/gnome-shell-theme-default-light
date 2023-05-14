@@ -273,6 +273,9 @@
 
 // overview icon, dash, app grid
 @mixin overview_icon($color, $flat: true) {
+  .overview-icon {
+    color: $fg_color;
+  }
   transition-duration: 400ms;
   .overview-icon { 
     @extend %tile;
