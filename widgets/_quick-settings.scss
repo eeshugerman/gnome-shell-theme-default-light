@@ -96,6 +96,13 @@
   padding: $base_padding*2;
   margin: $base_padding*2 $base_padding*3 0;
 
+  background-color: $bg_color !important;
+  color: $fg_color !important;
+  .popup-menu-item {
+    &:hover { background-color: $light_3; }
+    &:active { background-color: $light_1; }
+  }
+
   .popup-menu-item > StIcon { -st-icon-style: symbolic; }
 
   & .header {
