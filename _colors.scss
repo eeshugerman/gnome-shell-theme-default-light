@@ -43,6 +43,7 @@ $bubble_buttons_color: if($variant == 'light', darken($bg_color, 7%), lighten($b
 
 // overview background color
 $system_bg_color: $base_color;
+$system_fg_color: $fg_color;
 
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
