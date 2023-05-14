@@ -19,9 +19,6 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   &.login-screen {
     background-color: transparent;
   }
-  &:overview {
-      background-color: if($variant == 'light', $panel_bg_color, transparent);
-  }
 
   // panel menus
   .panel-button {
