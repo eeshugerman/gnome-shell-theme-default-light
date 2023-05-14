@@ -21,7 +21,7 @@
 }
 
 .quick-toggle {
-  &:checked { @include button(default, $c:$selected_bg_color); }
+  &:checked { @include button(default, $c:$selected_bg_color, $tc:$selected_fg_color); }
 
   & > StBoxLayout { spacing: $base_padding*1.5; }
 
@@ -62,7 +62,7 @@
     border-width: 0;
 
     &:checked {
-      @include button(default, $c:$selected_bg_color);
+      @include button(default, $c:$selected_bg_color, $tc:$selected_fg_color);
       border-color: $selected_borders_color;
     }
 

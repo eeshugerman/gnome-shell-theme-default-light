@@ -162,6 +162,11 @@
 
   .events-box {
     spacing: $base_padding;
+    .event-box {
+      .event-summary {
+        color: $fg_color;
+      }
+    }
   }
 
   .events-list {

@@ -209,23 +209,23 @@
   // default/suggested button
   @else if $t==default {
     background-color: $selected_bg_color;
-    color: $selected_fg_color;
+    color: $tc;
 
     &:focus {
-      box-shadow: inset 0 0 0 2px transparentize($selected_fg_color, .4) !important;
+      box-shadow: inset 0 0 0 2px transparentize($tc, .4) !important;
     }
     &:hover, &:focus {
       background-color: lighten($selected_bg_color, 5%);
-      color: lighten($selected_fg_color, 5%);
+      color: lighten($tc, 5%);
     }
     &:active {
       background-color: darken($selected_bg_color, 7%);
-      color: darken($selected_fg_color, 7%);
+      color: darken($tc, 7%);
     }
     &:insensitive {
       @include button(insensitive);
       background-color: transparentize($selected_bg_color, .5);
-      color: transparentize($selected_fg_color, .5);
+      color: transparentize($tc, .5);
     }
   }
 
@@ -237,7 +237,7 @@
     &:insensitive {
       @include button(insensitive);
       background-color: transparent;
-      color: transparentize($selected_fg_color, .5);
+      color: transparentize($tc, .5);
     }
   }
 }
@@ -311,14 +311,14 @@
   margin: $base_margin;
 
   @if $flat {
-    @include button(undecorated);
+    @include button(undecorated, $tc:$fg_color);
     box-shadow: none !important;
   } @else {
-    @include button(normal);
+    @include button(normal, $tc:$fg_color);
   }
-  &:hover {@include button(hover);}
-  &:active {@include button(active);}
-  &:focus {@include button(focus);}
+  &:hover {@include button(hover, $tc:$fg_color);}
+  &:active {@include button(active, $tc:$fg_color);}
+  &:focus {@include button(focus, $tc:$fg_color);}
 }
 
 // styling for all menuitems in popovers
