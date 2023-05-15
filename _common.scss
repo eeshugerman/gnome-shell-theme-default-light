@@ -170,11 +170,13 @@ stage {
 // that are undecorated by default and use OSD colors
 %osd_button {
   @include button(undecorated);
+  color: $osd_fg_color;
+  background-color: $osd_bg_color;
   &:insensitive { @include button(undecorated, $tc:$osd_fg_color, $c:$osd_bg_color);}
-  &:focus { @include button(focus, $tc:$osd_fg_color, $c:$osd_bg_color);}
-  &:hover { @include button(hover, $tc:$osd_fg_color, $c:$osd_bg_color);}
-  &:active { @include button(active, $tc:$osd_fg_color, $c:$osd_bg_color);}
-  &:outlined,&:checked { @include button(checked, $tc:$osd_fg_color, $c:$osd_bg_color);}
+  &:focus { @include button(focus, $tc:$osd_fg_color, $c:$light_1);}
+  &:hover { @include button(hover, $tc:$osd_fg_color, $c:$light_1);}
+  &:active { @include button(active, $tc:$osd_fg_color, $c:$light_1);}
+  &:outlined,&:checked { @include button(checked, $tc:$osd_fg_color, $c:$light_1);}
 }
 
 
