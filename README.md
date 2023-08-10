@@ -7,7 +7,8 @@ This is an _unofficial_ light variant of the default GNOME Shell theme.
 ![Screenshot of the App Grid](/demo/app-grid.png)
 
 # Build and install
-You'll need a [Sass][sass-lang] compiler (`sassc`).
+First, you'll need a [Sass][sass-lang] compiler (`sassc`). Then, run this
+command to install to your _user_ theme directory. Do not use `sudo`.
 ```bash
 make install
 ```
@@ -19,7 +20,7 @@ so I've heard), and therefore doesn't have full coverage the normal/modern GNOME
 Shell. This work piggybacks heavily on that upstream variant. In fact, it's
 really just a few hacks on top to fill in the cracks.
 
-## License
+# License
 This work is distributed under the terms of the GNU General Public
 License, version 2 or later. See the [COPYING][license] file for details.
 
