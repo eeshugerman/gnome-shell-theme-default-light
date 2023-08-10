@@ -1,7 +1,15 @@
-.PHONY:build
-build:
-	sassc gnome-shell.scss gnome-shell.css
+SASSC = sassc
+build_target = gnome-shell.css
+install_dir = $$HOME/.themes/Default-light/gnome-shell
+src = $(wildcard *.scss **/*.scss)
+src_entry_point = gnome-shell.scss
 
-.PHONY:install
-install: build
-	mkdir -p ~/.themes/Default-light/gnome-shell && cp gnome-shell.css ~/.themes/Default-light/gnome-shell/
+$(build_target): $(src)
+	$(SASSC) $(src_entry_point) $@
+
+.PHONY: build
+build: $(build_target)
+
+.PHONY: install
+install: $(build_target)
+	mkdir -p $(install_dir) && cp $(build_target) $(install_dir)/
